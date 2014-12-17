@@ -1,0 +1,28 @@
+body#componentsDemo .easy-change-theme {
+  position: fixed;
+  top: 11px;
+  right: 70px;
+  z-index: 999999;
+}
+body#componentsDemo .easy-change-theme button {
+  color: #FFF;
+}
+body#componentsDemo .easy-change-theme button.theme_default {
+  background: #428bca;
+}
+body#componentsDemo .easy-change-theme button.theme_dark {
+  background: #222;
+}
+body#componentsDemo .easy-change-theme button.theme_yamGreen {
+  background: #00A550;
+}
+
+@media (max-width: 768px) {
+  body#componentsDemo .easy-change-theme {
+    position: initial;
+    width: 185px;
+    display: block;
+    margin: 10px auto 20px;
+    height: 30px;
+  }
+}

@@ -1,0 +1,76 @@
+<!-- Sidebar -->
+<%
+var SystemGroup = [1,2,3];
+var P1Group = [5,6,7,8];
+var P2Group = [9,10,11];
+
+var System = isInRole(SystemGroup);
+var Project1 = isInRole(P1Group);
+var Project2 = isInRole(P2Group);
+%>
+<div id="sidebar-wrapper">
+	<% if(Project1 === true) { %>
+	<div class="sidebar-container">
+		<div class="sidebar">
+			<ul class="nav-sidebar">				
+				<li class="dropdown-contents nav-list accordion">
+					<a href="javascript: void(0)" class="dropdown-toggle sub-title">
+						<span class="glyphicon glyphicon-folder-open icon-left"></span>Project 1
+						<div class="acc-arrows">
+							<span class="glyphicon glyphicon-chevron-up icon-left"></span>
+							<span class="glyphicon glyphicon-chevron-down icon-left"></span>
+						</div>
+					</a>
+					<ul class="dropdown-menu" role="menu">
+						<% if(isInRole([6]) === true) { %><li class="dropdown-contents"><a href="#sidebar-dropdown" class="link-btn">item 1</a></li><% } %>
+						<% if(isInRole([7]) === true) { %><li class="dropdown-contents"><a href="#sidebar-dropdown" class="link-btn">item 2</a></li><% } %>
+						<% if(isInRole([8]) === true) { %><li class="dropdown-contents"><a href="#sidebar-dropdown" class="link-btn">item 3</a></li><% } %>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<% } %>
+	<% if(Project2 === true) { %>
+	<div class="sidebar-container">
+		<div class="sidebar">
+			<ul class="nav-sidebar">				
+				<li class="dropdown-contents nav-list accordion">
+					<a href="javascript: void(0)" class="dropdown-toggle sub-title">
+						<span class="glyphicon glyphicon-folder-open icon-left"></span>Project 2
+						<div class="acc-arrows">
+							<span class="glyphicon glyphicon-chevron-up icon-left"></span>
+							<span class="glyphicon glyphicon-chevron-down icon-left"></span>
+						</div>
+					</a>
+					<ul class="dropdown-menu" role="menu">
+						<% if(isInRole([10]) === true) { %><li class="dropdown-contents"><a href="#sidebar-dropdown" class="link-btn">item 1</a></li><% } %>
+						<% if(isInRole([11]) === true) { %><li class="dropdown-contents"><a href="#sidebar-dropdown" class="link-btn">item 2</a></li><% } %>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<% } %>
+	<% if(System === true) { %>
+	<div class="sidebar-container">
+		<div class="sidebar">
+			<ul class="nav-sidebar">				
+				<li class="dropdown-contents nav-list accordion open">
+					<a href="javascript: void(0)" class="dropdown-toggle sub-title">
+						<span class="glyphicon glyphicon-cog icon-left"></span>System Settings
+						<div class="acc-arrows">
+							<span class="glyphicon glyphicon-chevron-up icon-left"></span>
+							<span class="glyphicon glyphicon-chevron-down icon-left"></span>
+						</div>
+					</a>
+					<ul class="dropdown-menu" role="menu">
+						<% if(isInRole([2]) === true) { %><li class="dropdown-contents <%=(menu==='SysCreateUser') ? 'active' : ''%>"><a href="<%=home%>/Sys/createUser" class="link-btn">建立使用者</a></li><% } %>
+						<% if(isInRole([3]) === true) { %><li class="dropdown-contents <%=(menu==='SysUserList') ? 'active' : ''%>"><a href="<%=home%>/Sys/userlist" class="link-btn">使用者管理</a></li><% } %>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<% } %>
+</div>

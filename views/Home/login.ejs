@@ -1,0 +1,22 @@
+<% layout('../share/basic') -%>
+<% script(home + '/assets/customjs/HomeLogin.js') -%>
+<div id="wrap">		
+	<div id="midWrap">
+		<div class="container-fluid">
+			<div class="login_form">
+				<img src="<%=home%>/assets/images/RD2-1.png" alt="logo" class="img-circle">
+				<!-- <form class="form-horizontal" role="form" action="login" method="post"> -->
+				<div class="form_gap"><input type="text" class="form-control" id="inputEmail" placeholder="Account" name="username"></div>
+				<div class="form_gap"><input type="password" class="form-control" id="inputPassword" placeholder="Password" name="password"></div>
+				<div class="form_gap"><div class="checkbox">
+					<label>
+						<input type="checkbox"> Remember me
+					</label>
+				</div></div>
+				<div class="form_gap"><button type="submit" class="btn btn-default btn-lg btn-login">Submit</button></div>
+				<!-- </form> -->
+				<div class="alert  alert-danger" role="alert" align="center">...</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,24 @@
+body#SysProfile .label{
+	font-size: 14px;
+}
+
+body#SysProfile .label-group{
+	font-size: 17px;
+	color: #000000;
+	padding-bottom: 10px;
+}
+
+body#SysProfile .label-group .label-text{
+	padding: 0px 0px 0px 10px;
+}
+
+body#SysProfile .label-group .form-control{
+	width:150px;
+	height: 30px;
+	display: initial;
+	margin-left: 10px;
+}
+body#SysProfile .user-image{
+	width: 200px; 
+	height: 200px;
+}

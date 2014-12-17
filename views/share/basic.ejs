@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />	
+	<title><%=title%></title>
+	<link href="https://github.com/Eonasdan/bootstrap-datetimepicker/blob/master/build/css/bootstrap-datetimepicker.min.css" />
+	<link rel="stylesheet" href="<%=home%>/assets/css/layout.css" />
+	<%-stylesheets%>
+	<!--[if lt IE 9]>
+	<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>		
+	<![endif]-->
+</head>
+<body id="<%=identify%>" class="">
+	<noscript>
+		<div class="noscriptNotify">
+			<p><i class="fa fa-warning"></i>&nbsp;為了正常瀏覽本站，請開啟瀏覽器的 JavaScript，然後<a href="">再試一次</a>。</p>
+		</div>
+	</noscript>
+	<%-body -%>
+	<button id="scrollToTop" class="btn btn-default">
+		<span class="glyphicon glyphicon-arrow-up"></span>
+		<span class="text">TOP</span>
+	</button>
+	<footer id="footer"></footer>	
+	<!--[if IE]>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<![endif]-->
+	<!--[if !IE]>-->
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<!--<![endif]-->
+	<script type="text/javascript" src="<%=home%>/assets/javascripts/bootstrap.js"></script>
+	<script type="text/javascript" src="<%=home%>/assets/javascripts/moment.js"></script>
+	<script type="text/javascript" src="<%=home%>/assets/javascripts/bootstrap-datetimepicker.min.js"></script>
+	<script type="text/javascript" src="<%=home%>/assets/javascripts/jquery.zclip.min.js"></script>
+	<script type="text/javascript" src="<%=home%>/assets/javascripts/main.js"></script>	
+	<%-scripts%>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<% layout('../share/master') -%>
+<% stylesheet(home + '/assets/customcss/easyui_tree.css') -%>
+<% script(home + '/assets/customjs/SysCreateUser.js') -%>
+<% script(home + '/assets/customjs/jquery.easyui.min.1.4.1.js') -%>
+<div class="container-fluid CreateUserWrap">
+	<div class="panel panel-info">
+		<div class="panel-heading">
+			<h3 class="panel-title">建立使用者</h3>
+		</div>
+		<div class="panel-body">
+				<div class="obj_gap">
+				<div class="input-group">
+					<span class="input-group-addon">
+					<span class="glyphicon glyphicon-user"></span>
+					</span>
+					<input type="text" class="form-control" placeholder="Nick Name" id="nickname" name="nickname">
+				</div>
+			</div>
+			<div class="obj_gap">
+				<div class="input-group">
+					<span class="input-group-addon">
+						<span class="glyphicon glyphicon-question-sign"></span>
+					</span>
+					<input type="text" class="form-control" placeholder="Account" id="username" name="username">
+				</div>
+			</div>
+			<div class="obj_gap">
+				<div class="input-group">
+					<span class="input-group-addon">
+						<span class="glyphicon glyphicon-lock"></span>
+					</span>
+					<input type="password" class="form-control" placeholder="Password" id="password" name="password">
+				</div>
+			</div>
+			<div class="desc-box">
+				<h4><span class="label label-success">系統權限</span></h4>
+				<ul id="tt" 
+                    class="easyui-tree" 
+                    data-options="url:'rolelistinit/0',
+                                  method:'get',
+                                  animate:true,
+                                  checkbox:true" />
+			</div>
+			<button class="btn btn-primary btnCreateUser" data-target="#myModal" data-toggle="modal">建立</button>
+		</div>
+	</div>
+	<div class="alert" role="alert" align="center">...</div>
+</div>

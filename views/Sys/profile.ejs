@@ -1,0 +1,67 @@
+<% layout('../share/master') -%>
+<% stylesheet(home + '/assets/customcss/SysProfile.css') -%>
+<% stylesheet(home + '/assets/customcss/easyui_tree.css') -%>
+<% script(home + '/assets/customjs/jquery.easyui.min.1.4.1.js') -%>
+<% script(home + '/assets/customjs/SysProfile.js') -%>
+<div class="container-fluid ProfileWrap">
+	<div class="page-header">
+		<h1 id="panels" class="title">
+		使用者資料
+		</h1>
+	</div>
+	<div class="panel panel-info">
+		<div class="panel-heading">
+			<h3 class="panel-title">Profile</h3>
+		</div>
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-md-3">					
+					<img src="<%= profilePhoto%>" alt="..." class="user-image" />
+					<h4>
+					<% if (userIsActive === true) { %>
+						<span class="label label-primary">啟用</span>
+					<% } else { %>
+						<span class="label label-danger">停用</span>
+					<% } %>	
+					</h4>
+				</div>
+				<div class="col-md-9">
+					<div class="label-group">
+						<span class="label label-success">編號</span><span class="label-text"><%= userID%></span>
+					</div>
+					<div class="label-group">
+						<span class="label label-success">暱稱</span><input type="text" class="form-control" value="<%= userNickName%>" id="nickname" name="nickname">
+					</div>
+					<div class="label-group">
+						<span class="label label-success">帳號</span><span class="label-text"><%= userName%></span>
+					</div>
+					<div class="label-group">
+						<span class="label label-success">建立人員</span><span class="label-text"><%= userCreateByName%></span>
+					</div>
+					<div class="label-group">
+						<span class="label label-success">建立時間</span><span class="label-text"><%= userCreateDate%></span>
+					</div>
+					<div class="label-group">
+						<span class="label label-success">最後登入</span><span class="label-text"><%= userLastLoginDate%></span>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class=" col-md-12">
+					<div class="desc-box">
+						<h4><span class="label label-success">系統權限</span></h4>
+						<ul id="tt" 
+                            class="easyui-tree" 
+                            data-options="url:'rolelist/0/<%=userID%>',
+                                          method:'get',
+                                          animate:true,
+                                          checkbox:true" />
+					</div>
+				</div>
+			</div>
+			<input type="hidden" id="userID" name="userID" value="<%=userID%>" />
+			<button class="btn btn-primary btnUpdate" data-target="#myModal" data-toggle="modal">儲存</button>
+		</div>
+	</div>
+	<div class="alert" role="alert" align="center">...</div>	
+</div>
